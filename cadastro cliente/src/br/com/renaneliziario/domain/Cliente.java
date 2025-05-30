@@ -1,4 +1,4 @@
-package br.com.renan.domain;
+package br.com.renaneliziario.domain;
 public class Cliente {
 
     private String nome;
@@ -9,12 +9,12 @@ public class Cliente {
     private String cidade;
     private String estado;
 
-    public Cliente(String nome, Long cpf, Long tel, String end, Integer numero, String cidade, String estado) {
+     public Cliente(String nome, String cpf, String tel, String end, String num, String cidade, String estado) {
         this.nome = nome;
-        this.cpf = cpf;
-        this.tel = tel;
+        this.cpf = Long.valueOf(cpf.trim());
+        this.tel = Long.valueOf(tel.trim());
         this.end = end;
-        this.numero = numero;
+        this.numero = Integer.valueOf(num.trim());
         this.cidade = cidade;
         this.estado = estado;
     }
